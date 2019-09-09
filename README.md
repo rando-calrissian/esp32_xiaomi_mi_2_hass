@@ -38,6 +38,6 @@ For each user of the scale, fill out this block:
 The weight range will be used to determine between multiple users, so if they overlap, you'll need a different solution.
 Height is in CM and age is birth date in Year-Month-Day format.
 The notification target is set up for pushbullet, but you can recofigure it relatively easily.
-As long as you have discovery enabled for MQTT topics, nothing needs to be added to Home Assistant except for adding sensors to any UI you want, as Appdaemon will create all the sensors automatically.
+As long as you have discovery enabled for MQTT topics, nothing needs to be added to Home Assistant except any UI you want, as Appdaemon will create all the sensors automatically.
 
 You will find a sensor.bodymetrics_[username] with the overall stats along with individual sensors for each metric for easier graphing.

@@ -1,6 +1,6 @@
 # Xiaomi Mi Scale V2 ESP32 to Home Assistant Bridge
 Xiaomi Mi Body Composition Scale integration into Home Assistant using an ESP32 as a BLE to Wifi bridge with Appdaemon processing the data.
-The Appdaemon app will create all sensors automatically as well as send notifications to each user of their stats as well as the delta from their previous reading (any weight/muscle/etc. gained/lost).
+The Appdaemon app will create all sensors automatically and send notifications to each user of their stats as well as the delta from their previous reading (any weight/muscle/etc. gained/lost).
 
 ## Acknowledgements: 
 This builds on top of the work of lolouk44 https://github.com/lolouk44/xiaomi_mi_scale and directly uses the python functions of that tool to perform its measurements.

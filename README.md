@@ -41,3 +41,5 @@ The notification target is set up for pushbullet, but you can recofigure it rela
 As long as you have discovery enabled for MQTT topics, nothing needs to be added to Home Assistant except any UI you want, as Appdaemon will create all the sensors automatically.
 
 You will find a sensor.bodymetrics_[username] with the overall stats along with individual sensors for each metric for easier graphing.
+
+Note:. Due to the nature of the scan, it can take thirty or so seconds before it notifies the user.  It will also sleep for 5 minutes after a reading to avoid keeping the scale awake.  I'm not sure this is actually a thing, but it's mentioned elsewhere and I didn't test it.

@@ -269,6 +269,7 @@ class MyAdvertisedDeviceCallbacks : public BLEAdvertisedDeviceCallbacks
     {
 
       Serial.printf("Advertised Device: %s \n", advertisedDevice.toString().c_str());
+      Serial.printf("Mac Address : %s \n", advertisedDevice.getAddress().toString().c_str());
  
       if ( advertisedDevice.getAddress().toString() == scale_mac_addr )
       {        

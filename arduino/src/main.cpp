@@ -39,7 +39,7 @@ IPAddress gateway(192,168,0,1);
 IPAddress subnet(255,255,255,0);
 
 // MQTT Details
-const char* mqtt_server = "192.168.0.162";
+const char* mqtt_server = "192.168.0.101";
 const int mqtt_port = 1883;
 const char* mqtt_userName = "mqttuser";
 

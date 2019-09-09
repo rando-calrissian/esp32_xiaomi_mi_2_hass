@@ -18,9 +18,9 @@ $ sudo hcitool lescan
 ```
 Look for an entry with MIBCS.  Be sure to use the scale while scanning so it will be awake.
 
-You can use the ESP32 program to determine the mac address as well, just look in the source for the scan and uncomment the lines which indicate this.
+You can use the ESP32 program to determine the mac address as well, just look in the source for the scan and uncomment the lines which display the output over serial of the scan.
 
-Add the mac address, wifi credentials, mqtt credentials, and desired IP to the arduino program.  Build it and upload.
+Add the mac address, wifi credentials, mqtt credentials, and desired IP to the arduino program.  Build it and upload to your ESP32.  It will scan all the time waiting for new data over BLE, and when it finds it, it will switch onto wifi, upload the data, then switch back to scanning again after a few minutes.
 
 Next open the xiaomi_scale.py appdaemon app.
 For each user of the scale, fill out this block:
@@ -39,3 +39,5 @@ The weight range will be used to determine between multiple users, so if they ov
 Height is in CM and age is birth date in Year-Month-Day format.
 The notification target is set up for pushbullet, but you can recofigure it relatively easily.
 As long as you have discovery enabled for MQTT topics, nothing needs to be added to Home Assistant except for adding sensors to any UI you want, as Appdaemon will create all the sensors automatically.
+
+You will find a sensor.bodymetrics_[username] with the overall stats along with individual sensors for each metric for easier graphing.

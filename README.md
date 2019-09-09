@@ -18,7 +18,7 @@ $ sudo hcitool lescan
 ```
 Look for an entry with MIBCS.  Be sure to use the scale while scanning so it will be awake.
 
-You can use the ESP32 program to determine the mac address as well, just look in the source for the scan and uncomment the lines which display the output over serial of the scan.
+You can use the ESP32 program to determine the mac address as well, as by default it will list the devices and mac addresses it finds over serial.
 
 Add the mac address, wifi credentials, mqtt credentials, and desired IP to the arduino program.  Build it and upload to your ESP32.  It will scan all the time waiting for new data over BLE, and when it finds it, it will switch onto wifi, upload the data, then switch back to scanning again after a few minutes.
 

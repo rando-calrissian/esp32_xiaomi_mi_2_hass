@@ -24,7 +24,7 @@
 // If you don't know it, you can scan with serial debugging
 // enabled and uncomment the lines to print out everything you find
 // You should use the scale while this is running
-String scale_mac_addr "xx:xx:xx:xx:xx:xx"
+#define scale_mac_addr "xx:xx:xx:xx:xx:xx"
 
 
 // network details

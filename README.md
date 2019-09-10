@@ -20,7 +20,11 @@ Look for an entry with MIBCS.  Be sure to use the scale while scanning so it wil
 
 You can use the ESP32 program to determine the mac address as well, as by default it will list the devices and mac addresses it finds over serial.
 
-Add the mac address, wifi credentials, mqtt credentials, and desired IP to the arduino program.  Build it and upload to your ESP32.  It will scan all the time waiting for new data over BLE, and when it finds it, it will switch onto wifi, upload the data, then switch back to scanning again after a few minutes.
+Add the mac address, wifi credentials, mqtt credentials, and desired IP to the arduino program.  It may require more space the the default setup, if you have build errors, add this to your platformio.ini:
+```
+board_build.partitions = min_spiffs.csv
+```
+Once built and uploaded to your ESP32, it will scan all the time waiting for new data over BLE, and when it finds it, it will switch onto wifi, upload the data, then switch back to scanning again after a few minutes.
 
 Next open the xiaomi_scale.py appdaemon app.
 For each user of the scale, fill out this block:

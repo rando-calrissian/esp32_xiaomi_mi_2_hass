@@ -42,7 +42,7 @@ IPAddress subnet(255,255,255,0);
 const char* mqtt_server = "192.168.0.101";
 const int mqtt_port = 1883;
 const char* mqtt_userName = "mqttuser";
-
+const char* mqtt_userPass = "mqttpass";
 const char* clientId = "esp32_";
 
 
@@ -215,7 +215,7 @@ void reconnect() {
     mqtt_client.setServer(mqtt_server, mqtt_port);
 
     // Attempt to connect
-    if (mqtt_client.connect(mqtt_clientId.c_str(),mqtt_userName,mqtt_userName))
+    if (mqtt_client.connect(mqtt_clientId.c_str(),mqtt_userName,mqtt_userPass))
     {
       Serial.println("connected");
 

@@ -335,7 +335,7 @@ void ScanBLE()
     float  weight = stoi2( hex, 22 ) * 0.01f;
     float  impedance = stoi2( hex, 18 ) * 0.01f;
 
-    if ( unNoImpedanceCount < 3 && impedance == 0 )
+    if ( unNoImpedanceCount < 3 && impedance <= 0 )
     {
       // Got a reading, but it's missing the impedance value
       // We may have gotten the scan in between the weight measurement

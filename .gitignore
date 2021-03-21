@@ -1,0 +1,14 @@
+# VSCode
+.vscode
+
+# Arduino compilation buffer
+output
+
+# Let's not share all my personal stuff with the whole world
+copy_with_creds.ino
+config.yml
+*.log
+
+# Python-specific
+__pycache__
+venv

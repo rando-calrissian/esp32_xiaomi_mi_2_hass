@@ -1,0 +1,13 @@
+garmin:
+  username: xxxxxxx@yyy.zzz
+  password: lasdfkjladsjgf
+  dateOfBirth: yyyy-mm-dd
+  sex: male/female
+  height: 123
+
+mqtt:
+  host: localhost
+  port: 8884
+  username: mqttUser
+  password: mqttPassword
+  topic: stat/scale/attributes    # leave as is
